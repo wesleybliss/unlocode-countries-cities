@@ -2,7 +2,7 @@ import countries from '../../data/countries'
 
 export default function handler(req, res) {
     
-    const data = [...countries]
+    let data = [...countries]
     
     if (req.query.code)
         data = data.filter(it => it.code.includes(req.query.code.toUpperCase()))
